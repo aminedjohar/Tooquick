@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Survey-Website TooQuick Survey
 TooQuick Survey is a web application built with Laravel and ReactJS, designed to streamline the process of creating and conducting surveys. With an intuitive and user-friendly interface, it provides a powerful platform for individuals and organizations to gather valuable feedback and insights.
 
@@ -24,3 +25,7 @@ The project leverages the Laravel framework for robust backend development, ensu
 Whether you are conducting customer satisfaction surveys, employee feedback surveys, or market research, TooQuick Survey simplifies the survey process, enabling you to gather actionable insights quickly and efficiently.
 
 Let TooQuick Survey revolutionize your data collection and analysis today!
+=======
+# tooquick
+Tooquick is a survey app designed to streamline the process of creating and conducting surveys
+>>>>>>> 3ba59a6c4e6b35cf39595e28852727f37b05d37f
