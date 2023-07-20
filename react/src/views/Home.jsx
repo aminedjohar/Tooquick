@@ -8,27 +8,27 @@ import { Link } from 'react-router-dom'
 
 const features = [
     {
-        name: 'Push to deploy',
+        name: 'Survey Creation',
         description:
-            'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+            'An intuitive interface to design and create surveys with various question types, such as multiple-choice, open-ended, rating scales, Likert scales, and more. It should allow for customization, branding, and the ability to add multimedia elements.',
         icon: CloudArrowUpIcon,
     },
     {
-        name: 'SSL certificates',
+        name: 'Real-time Reporting',
         description:
-            'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+            'Live monitoring of survey responses and real-time analytics, presented in visual formats like charts, graphs, and tables. This allows survey creators to quickly interpret results and identify trends.',
         icon: LockClosedIcon,
     },
     {
-        name: 'Simple queues',
+        name: 'Mobile Responsiveness',
         description:
-            'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+            'Surveys should be optimized for mobile devices, as many participants prefer taking surveys on smartphones or tablets.',
         icon: ArrowPathIcon,
     },
     {
-        name: 'Advanced security',
+        name: 'Survey Piping',
         description:
-            'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+            'The ability to dynamically insert data from previous questions into subsequent questions, providing a more personalized experience for respondents.',
         icon: FingerPrintIcon,
     },
 ]
@@ -258,13 +258,12 @@ export default function Example() {
             <div className="bg-white py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:text-center">
-                        <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+                        <h2 className="text-base font-semibold leading-7 text-indigo-600">Collect Data Faster</h2>
                         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            Everything you need to deploy your app
+                            Everything you need to recrute better and ask better
                         </p>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-                            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+                            Collect valuable information and feedback from participants on various topics. To achieve this, Tooquick typically offer a range of features to create, distribute, and analyze surveys effectively.
                         </p>
                     </div>
                     <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -284,6 +283,38 @@ export default function Example() {
                     </div>
                 </div>
             </div>
+
+            {/* FAQ's Section */}
+
+            <div className="container mx-auto py-8">
+                <div className="m-8">
+                    <h2 className="text-2xl text-center font-bold mb-8">Frequently Asked Questions</h2>
+                    <div className="flex flex-col">
+                        {questions.map((question) => (
+                            <div
+                                key={question.id}
+                                className="border-b border-gray-200 py-4 cursor-pointer"
+                                onClick={() => handleQuestionClick(question.id)}
+                            >
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-lg font-medium">{question.question}</h3>
+                                    {/* {openQuestion === question.id ? (
+                                    <FaChevronUp className="text-gray-400" />
+                                ) : (
+                                    <FaChevronDown className="text-gray-400" />
+                                )} */}
+                                </div>
+                                {openQuestion === question.id && (
+                                    <p className="text-gray-600 mt-4">{question.answer}</p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+
+
 
             {/* Pricing Section */}
 
@@ -319,62 +350,13 @@ export default function Example() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                            <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                                <div className="mx-auto max-w-xs px-8">
-                                    <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                                    <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                                        <span className="text-5xl font-bold tracking-tight text-gray-900">$34.53</span>
-                                        <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                                    </p>
-                                    <a
-                                        href="#"
-                                        className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                    >
-                                        Get access
-                                    </a>
-                                    <p className="mt-6 text-xs leading-5 text-gray-600">
-                                        Invoices and receipts available for easy company reimbursement
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
 
-            {/* FAQ's Section */}
-
-            <div className="container mx-auto py-8">
-                <div className="m-8">
-                    <h2 className="text-2xl text-center font-bold mb-8">Frequently Asked Questions</h2>
-                    <div className="flex flex-col">
-                        {questions.map((question) => (
-                            <div
-                                key={question.id}
-                                className="border-b border-gray-200 py-4 cursor-pointer"
-                                onClick={() => handleQuestionClick(question.id)}
-                            >
-                                <div className="flex items-center justify-between">
-                                    <h3 className="text-lg font-medium">{question.question}</h3>
-                                    {/* {openQuestion === question.id ? (
-                                    <FaChevronUp className="text-gray-400" />
-                                ) : (
-                                    <FaChevronDown className="text-gray-400" />
-                                )} */}
-                                </div>
-                                {openQuestion === question.id && (
-                                    <p className="text-gray-600 mt-4">{question.answer}</p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
 
             {/* Footer Section */}
-
-
             <footer class="bg-white dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl my-2">
                     <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
